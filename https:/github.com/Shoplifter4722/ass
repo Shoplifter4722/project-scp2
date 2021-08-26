@@ -1,0 +1,196 @@
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local w = library:CreateWindow("Project SCP") -- Creates the window
+
+local a = w:CreateFolder("Teleports") -- Creates the folder(U will put here your buttons,etc)
+
+local c = w:CreateFolder("Misc")
+
+c:Button("INF AMMO",function()
+    local A_1 = game:GetService("Workspace").ElChaqoGuzman.Ammo["7.62mm"]
+    local A_2 = 999
+    local Event = game:GetService("ReplicatedStorage").SyncMagAndAmmo
+    Event:FireServer(A_1, A_2)
+    local A_1 = game:GetService("Workspace").ElChaqoGuzman.Ammo["5.56mm"]
+    local A_2 = 999
+    local Event = game:GetService("ReplicatedStorage").SyncMagAndAmmo
+    Event:FireServer(A_1, A_2)
+    local A_1 = game:GetService("Workspace").ElChaqoGuzman.Ammo["9mm"]
+    local A_2 = 999
+    local Event = game:GetService("ReplicatedStorage").SyncMagAndAmmo
+    Event:FireServer(A_1, A_2)
+    local A_1 = game:GetService("Workspace").ElChaqoGuzman.Ammo["50 BMG"]
+    local A_2 = 999
+    local Event = game:GetService("ReplicatedStorage").SyncMagAndAmmo
+    Event:FireServer(A_1, A_2)
+    local A_1 = game:GetService("Workspace").ElChaqoGuzman.Ammo["Shells"]
+    local A_2 = 999
+    local Event = game:GetService("ReplicatedStorage").SyncMagAndAmmo
+    Event:FireServer(A_1, A_2)
+    local A_1 = game:GetService("Workspace").ElChaqoGuzman.Ammo["40mm grenades"]
+    local A_2 = 999
+    local Event = game:GetService("ReplicatedStorage").SyncMagAndAmmo
+    Event:FireServer(A_1, A_2)
+end)
+
+a:Button("Nuke control",function()
+    function teleportTO(placeCFrame)
+        local plyr = game.Players.LocalPlayer
+        if plyr.Character then
+            plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+        end
+    end
+    teleportTO(game:GetService("Workspace").Warhead.Screen.CFrame)
+end)
+
+a:Button("surface",function()
+    function teleportTO(placeCFrame)
+        local plyr = game.Players.LocalPlayer
+        if plyr.Character then
+            plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+        end
+    end
+    teleportTO(game:GetService("Workspace").Spawns["CI Spy"].Spawn.CFrame)
+end)
+
+a:Button("173",function()
+    function teleportTO(placeCFrame)
+        local plyr = game.Players.LocalPlayer
+        if plyr.Character then
+            plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+        end
+    end
+    teleportTO(game:GetService("Workspace").Spawns["SCP-173"].Spawn.CFrame)
+end)
+
+a:Button("ESCAPE",function()
+    function teleportTO(placeCFrame)
+        local plyr = game.Players.LocalPlayer
+        if plyr.Character then
+            plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+        end
+    end
+    teleportTO(game:GetService("Workspace").ESCAPEPART.CFrame)
+end)
+
+
+a:Button("Surface Top",function()
+    local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+    local location = CFrame.new(-1995.56531, 1133.72351, 485.462158)
+    local humanoid = game.Players.LocalPlayer.Character.Humanoid
+    wait(0.1)
+    pl.CFrame = location
+end)
+
+a:Button("LCZ armory",function()
+    function teleportTO(placeCFrame)
+        local plyr = game.Players.LocalPlayer
+        if plyr.Character then
+            plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+        end
+    end
+    teleportTO(game:GetService("Workspace").MAP.Rooms["LCZ_Armory"].Lockers.Locker.Model.Part.CFrame)
+end)
+
+a:Button("LCZ loot",function()
+    function teleportTO(placeCFrame)
+        local plyr = game.Players.LocalPlayer
+        if plyr.Character then
+            plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+        end
+    end
+    teleportTO(game:GetService("Workspace").MAP.Rooms["SCP-372"].Model.Floor2.CFrame)
+end)
+
+a:Button("914",function()
+    function teleportTO(placeCFrame)
+        local plyr = game.Players.LocalPlayer
+        if plyr.Character then
+            plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+        end
+    end
+    teleportTO(game:GetService("Workspace").MAP.Rooms["SCP-914"].Model.Floor2.CFrame)
+end)
+
+a:Button("obsidian knife",function()
+    function teleportTO(placeCFrame)
+        local plyr = game.Players.LocalPlayer
+        if plyr.Character then
+            plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+        end
+    end
+    teleportTO(game:GetService("Workspace").MAP.Rooms["LCZ_Containment_034"]["DECON_GAS_PART"].CFrame)
+end)
+
+a:Button("Funny paper",function()
+    function teleportTO(placeCFrame)
+        local plyr = game.Players.LocalPlayer
+        if plyr.Character then
+            plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+        end
+    end
+    teleportTO(game:GetService("Workspace").MAP.Rooms["SCP-012"].Model.Union.CFrame)
+end)
+
+c:Button("UNfunny",function()
+    local A_1 = "UNFUNNY"
+local Event = game:GetService("ReplicatedStorage").use294
+Event:FireServer(A_1)
+end)
+c:Button("Toggle Nuke",function()
+    local Event = game:GetService("ReplicatedStorage").ToggleNuke
+    Event:FireServer()    
+end)
+
+c:Button("Start Nuke",function()
+    local Event = game:GetService("ReplicatedStorage").StartNuke
+    Event:FireServer()      
+end)
+
+c:Button("NVG",function()
+    local Event = game:GetService("ReplicatedStorage").equipnvg
+    Event:FireServer()       
+end)
+
+c:Button("Goto Spawn",function()
+    local Event = game:GetService("ReplicatedStorage").Respawn
+    Event:FireServer()     
+end)
+
+c:Button("Facility Manager",function()
+    local A_1 = game:GetService("Workspace").Items["Facility Manager Keycard"]
+    local Event = game:GetService("ReplicatedStorage").PickUp
+    Event:FireServer(A_1)  
+end)             
+
+c:Button("SCAR",function()
+    local A_1 = game:GetService("Workspace").Items["SCAR-L"]
+    local Event = game:GetService("ReplicatedStorage").PickUp
+    Event:FireServer(A_1)
+end) 
+
+c:Button("Obsidian Knife",function()
+    local A_1 = game:GetService("Workspace").Items["SCP-034"]
+    local Event = game:GetService("ReplicatedStorage").PickUp
+    Event:FireServer(A_1) 
+end) 
+
+c:Button("MILKOR",function()
+    local A_1 = game:GetService("Workspace").Items["Milkor MGL"]
+    local Event = game:GetService("ReplicatedStorage").PickUp
+    Event:FireServer(A_1)    
+end) 
+
+c:Button("Scp-005",function()
+local A_1 = game:GetService("Workspace").Items["SCP-005"]
+local Event = game:GetService("ReplicatedStorage").PickUp
+Event:FireServer(A_1)
+end) 
+
+c:Button("05",function()
+    local A_1 = game:GetService("Workspace").Items["05 Keycard"]
+    local Event = game:GetService("ReplicatedStorage").PickUp
+    Event:FireServer(A_1)
+    end) 
+    
+c:DestroyGui()
